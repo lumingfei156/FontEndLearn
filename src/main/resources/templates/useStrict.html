@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>严格模式</title>
+</head>
+<body>
+    严格模式
+    <script>
+        /**
+         * 严格模式下不能使用省略var定义全局变量
+         */
+        function useStrict() {
+            "use strict";
+            var a = 1.0 * 152.0147;
+            console.log(a);
+        }
+
+        /**
+         * 非严格模式下可以使用省略var定义全局变量
+         */
+        function noUseStrict() {
+            message = "gobal message";
+        }
+        useStrict();
+        noUseStrict();
+        console.log(message);
+    </script>
+</body>
+</html>
