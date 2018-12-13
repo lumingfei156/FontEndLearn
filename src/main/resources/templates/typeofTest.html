@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>typeof运算符的使用</title>
+</head>
+<body>
+    typeof运算符的使用
+    <script>
+
+        function functionVar() {
+        }
+
+        var message = "string message";
+        var intVar = 95;
+        var booleanVar = true;
+        var undefinedVar = undefined;
+        var nullVar = null;
+
+        console.log("message类型: " + typeof message);
+        console.log("intVar类型: " + typeof intVar);
+        console.log("booleanVar类型: " + typeof booleanVar);
+        console.log("undefinedVar类型: " + typeof undefinedVar);
+        console.log("nullVar类型: " + typeof nullVar);
+        console.log("functionVar类型: " + typeof functionVar);
+        console.log("null 与 undefined比较的结果：");
+        console.log(nullVar == undefinedVar)
+    </script>
+</body>
+</html>
