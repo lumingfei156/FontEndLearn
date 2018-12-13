@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>scriptTest</title>
+    <meta charset="UTF-8">
+    <title>script元素测试</title>
+</head>
+<body>
+    尝试引入Js
+    <noscript>
+        <p>浏览器不支持脚本，请开启脚本权限后再尝试！！</p>
+    </noscript>
+    <script src="../static/js/scriptTest.js" th:src="@{/static/js/scriptTest.js}"></script>
+    <script>
+        function saySuccessByInternal() {
+            console.log("scriptTest success By Internal!");
+        }
+
+        saySuccessByInternal();
+    </script>
+
+</body>
+</html>
