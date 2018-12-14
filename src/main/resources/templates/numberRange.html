@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>number范围</title>
+</head>
+<body>
+    Number范围
+    <script>
+        console.log("Number类型的最大值: " + Number.MAX_VALUE);
+        console.log("Number类型的最小值: " + Number.MIN_VALUE);
+        //如果Number类型大于MAX_VALUE会自动转换成INFINITY类型
+        console.log( "数值运算超过最大值会自动转换成无穷: Number.MAX_VALUE + Number.MAX_VALUE = ");
+        console.log(Number.MAX_VALUE + Number.MAX_VALUE);
+        //通过POSITIVE_INFINITY或者NEGATIVE_INFINITY获取相应的无穷值
+        console.log("通过Number.POSITIVE_INFINITY获得正无穷值: " + Number.POSITIVE_INFINITY);
+        console.log("通过Number.NEGATIVE_INFINITY获得负无穷值: " + Number.NEGATIVE_INFINITY);
+        //IsFinite可以检测数值是否在最大值，最小值之间，如果在，就返回true
+        console.log("通过isFinite判断数值是否在正常范围内: " + isFinite(Number.MAX_VALUE + Number.MAX_VALUE));
+        console.log("通过isFinite判断数值是否在正常范围内: " + isFinite(2));
+    </script>
+</body>
+</html>
