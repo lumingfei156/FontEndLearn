@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>NaN测试</title>
+</head>
+<body>
+    NaN测试
+    <script>
+        console.log("-1/0 :" + -1/0);
+        console.log("1/0 :" + 1/0);
+        console.log("0/0 :" + 0/0);
+        console.log("NaN + 1 : ");
+        console.log( NaN + 1);
+        //isNaN方法
+        console.log("isNaN(NaN) :" + isNaN(NaN));
+        console.log("isNaN(10) :" + isNaN(10));
+        console.log("isNaN(\"hello\") :" + isNaN("hello"));
+        console.log("isNaN(\"10\") :" + isNaN("10"));
+        console.log("isNaN(true):" + isNaN(true));
+    </script>
+</body>
+</html>
