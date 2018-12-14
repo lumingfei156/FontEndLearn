@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Number函数</title>
+</head>
+<body>
+    Number函数
+
+    <script>
+        //boolean值直接转换成1或0
+        console.log("Number(true): " + Number(true));
+        console.log("Number(false): " + Number(false));
+        //数字类型，直接返回数字
+        console.log("Number(10):" + Number(10));
+        //null返回0
+        console.log("Number(null):" + Number(null));
+        //undefined返回NaN
+        console.log("Number(undefined):" + Number(undefined));
+        //只包含数字的字符串，会省略前面的0
+        console.log("Number(\"010\"):" + Number("010"));
+        //如果是16进制的数字，会返回10进制的数值
+        console.log("Number(\"0xf\"):" + Number("0xf"));
+        //空字符串
+        console.log("Number(\"\"):" + Number(""));
+        //不包含数字的字符串，返回NaN
+        console.log("Number(\"Hello world\"):" + Number("Hello world"));
+
+    </script>
+</body>
+</html>
