@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>break测试</title>
+</head>
+<body>
+    break语句测试
+    <script>
+        var num = 0;
+        //如果不命名外层循环，再内层循环break只会跳出内层循环
+        for (var i = 0;i < 10;i++){
+            for (var j = 0; j < 10;j++){
+                if (j === 5 && i === 5){
+                    break;
+                }
+                num++;
+            }
+        }
+        console.log(num); //95
+        num = 0;
+        //命名了外层循环，再内层循环brea xxx就能跳到out指定的外置外下执行
+        out: for (i = 0;i < 10;i++){
+            for (j = 0; j < 10;j++){
+                if (j === 5 && i === 5){
+                    break out;
+                }
+                num++;
+            }
+        }
+        console.log(num); //55
+
+    </script>
+</body>
+</html>
