@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>with语句测试</title>
+</head>
+<body>
+    with语句测试
+    <script>
+
+        var gs = location.search.substring(1);
+        var hostName = location.hostname;
+        var url = location.href;
+        console.log(gs);
+        console.log(hostName);
+        console.log(url);
+
+        console.log("下面使用with语句定义变量：");
+
+        with (location){
+            var gs1 = search.substring(1);
+            var hostName1 = hostname;
+            var url1 = href;
+        }
+        console.log(gs1);
+        console.log(hostName1);
+        console.log(url1);
+
+    </script>
+</body>
+</html>
