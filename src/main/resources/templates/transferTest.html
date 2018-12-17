@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>传递测试</title>
+</head>
+<body>
+    传递测试
+    <script>
+        var obj = new Object();
+
+        obj.name = "lulu";
+        //通过方法改变obj的名字
+        transferTest(obj);
+        //输出名字
+        console.log("如果obj.name为傻子就是引用传递，如果obj.name为changeName就是值传递： ");
+        console.log("obj.name为："+ obj.name);
+
+        function transferTest(obj) {
+            obj.name = "changeName";
+            obj = new Object();
+            obj.name = "傻子";
+        }
+
+    </script>
+</body>
+</html>
