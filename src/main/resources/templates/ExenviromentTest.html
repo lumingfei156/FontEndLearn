@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>执行环境与作用域</title>
+</head>
+<body>
+执行环境与作用域测试
+    <script>
+        //外部变量对象
+        var outColor = "blue";
+        //执行环境outFunction
+        function outFunction() {
+            //内部变量对象
+            var inColor = "red";
+
+            function inFunction() {
+                var temp = outColor;
+                outColor = inColor;
+                inColor = temp;
+            }
+            //调用内部执行方法
+            inFunction();
+        }
+
+    </script>
+</body>
+</html>
