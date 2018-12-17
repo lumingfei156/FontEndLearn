@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>延长作用域链</title>
+</head>
+<body>
+    延长作用域链
+    <script>
+
+        function builUrl() {
+            var str = "?debug=true";
+
+            with (location){
+                var url = href + str;
+            }
+            return url;
+        }
+
+    </script>
+</body>
+</html>
