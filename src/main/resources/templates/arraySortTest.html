@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Array排序测试</title>
+</head>
+<body>
+    Array排序测试
+    <script>
+        //调用翻转函数
+        var reverseArray = [1,2,3,4,5];
+        console.log("reverseArray调用reverse方法：" + reverseArray.reverse());
+        //调用不传入参数的排序方法
+        var sortArray = [0,10,8,5];
+        console.log("sortArray调用sort()方法: " + sortArray.sort());
+        console.log("sortArray调用sort(compareTo)方法：" + sortArray.sort(compareTo));
+        
+        //自定义比较函数，并且传入sort中
+        function compareTo(value1,value2) {
+            if (value1 > value2){
+                return 1;
+            }else if(value1 < value2){
+                return -1;
+            }else{
+                return 0;
+            }
+        }
+        console.log("数值类型的元素的比较方法可以直接调用value1 - value2: " + sortArray.sort(compartTo2));
+        function compartTo2(value1,vaule2) {
+            return value1 - vaule2;
+        }
+
+    </script>
+</body>
+</html>
