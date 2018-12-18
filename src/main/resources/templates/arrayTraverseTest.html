@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>array遍历测试</title>
+</head>
+<body>
+    array遍历测试
+    <script>
+        var array = [1,2,3,4,5,6,7,8,9,10];
+        //如果每一项都是true则返回true
+        console.log("array.every(function (item,index,array) { return item > 2; }): " + array.every(function (item,index,array) { return item > 2; }));
+        //some,对数组每一项运行函数，当函数任意一项返回true则返回true
+        console.log("array.some(function (item,index,array) { return item > 2; }): " + array.some(function (item,index,array) { return item > 2; }));
+        //对数组中的每个元素运行函数中的表达式，只会返回函数判断中为true的元素
+        console.log("array.filter(function (item,index,array) { return item > 2; }): " + array.filter(function (item,index,array) { return item > 2; }));
+        //forEach,没有返回值
+        array.forEach(function (item,index,array) { console.log("通过forEach输出元素; " + item); });
+        //map,返回每次函数调用的结果组成的数组
+        console.log("array.map(function (item,index,array) { return item + 1; }): " + array.map(function (item,index,array) { return item + 1; }));
+    </script>
+</body>
+</html>
