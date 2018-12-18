@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Array类型测试</title>
+</head>
+<body>
+    Array类型测试
+    <script>
+        var array1 = new Array(3);
+        var array2 =  ["hello","world","ECMAScript"];
+        console.log("array2的长度lenth为: " + array2.length);
+        console.log( "array2的第三个元素是: "+ array2[2]);
+        //更改lenth的长度
+        array2.length = 2;
+        console.log("通过length更改length的长度为2之后访问第三个元素:" + array2[2]);
+        //检测是否是数组
+        console.log("isArray方法检测是否是数组: " + Array.isArray(array1));
+        console.log("instanceof检测是否是数组: " + (array1 instanceof Array));
+        //转换方法测试
+        var lulu = {
+            toLocaleString : function () {
+                return "luluLocalString";
+            },
+            toString : function () {
+                return "luluToString";
+            }
+        };
+
+        var wangdachui = {
+            toLocaleString : function () {
+                return "wangdachuiLocalString";
+            },
+            toString : function () {
+                return "wangdachuiToString";
+            }
+        };
+        var perArray = [lulu,wangdachui];
+        console.log("perArray的toLocalString方法: " + perArray.toLocaleString());
+        console.log("perArray的toString方法：" + perArray.toString());
+        console.log("perArray的valueOf方法: " + perArray.valueOf());
+        console.log("perArray的join(\"||\")方法: " + perArray.join("||"));
+    </script>
+</body>
+</html>
