@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Array缩小方法</title>
+</head>
+<body>
+    Array缩小方法
+    <script>
+        var array = [1,2,3,4,5];
+        console.log( "array.reduce(function (pre, cur,curindex,array) {return pre + cur;}): " + array.reduce(function (pre, cur,curindex,array) {return pre + cur;}));
+        console.log("array.reduceRight(function (pre,cur,curindex,array) {return pre + cur;}): " + array.reduceRight(function (pre,cur,curindex,array) {return pre + cur;}))
+    </script>
+</body>
+</html>
