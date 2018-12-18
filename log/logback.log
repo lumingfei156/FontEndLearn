@@ -1,17 +1,18 @@
-11:04:28.765 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 7308 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
-11:04:28.770 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
-11:04:29.318 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
-11:04:29.571 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
-11:04:29.580 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
-11:04:30.421 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-11:04:30.436 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-11:04:30.462 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-11:04:30.463 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
-11:04:30.469 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
-11:04:30.589 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
-11:04:30.589 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1721 ms
-11:04:31.405 logback [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-11:04:31.488 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-11:04:31.501 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
-11:04:31.520 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
-11:04:31.524 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 3.483 seconds (JVM running for 12.157)
+10:04:10.647 logback [main] INFO  c.f.fontend.FontendApplicationTests - Starting FontendApplicationTests on DESKTOP-HHR2Q8R with PID 10724 (started by lulu in E:\Program\IDEA\FontEndLearn)
+10:04:10.652 logback [main] INFO  c.f.fontend.FontendApplicationTests - No active profile set, falling back to default profiles: default
+10:04:11.240 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+10:04:11.356 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+10:04:11.362 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+10:04:12.825 logback [main] INFO  c.f.fontend.FontendApplicationTests - Started FontendApplicationTests in 2.635 seconds (JVM running for 4.106)
+10:05:52.138 logback [main] INFO  c.f.fontend.FontendApplicationTests - Starting FontendApplicationTests on DESKTOP-HHR2Q8R with PID 17924 (started by lulu in E:\Program\IDEA\FontEndLearn)
+10:05:52.140 logback [main] INFO  c.f.fontend.FontendApplicationTests - No active profile set, falling back to default profiles: default
+10:05:52.709 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+10:05:52.800 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+10:05:52.808 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+10:05:54.177 logback [main] INFO  c.f.fontend.FontendApplicationTests - Started FontendApplicationTests in 2.5 seconds (JVM running for 3.528)
+10:06:06.389 logback [main] INFO  c.f.fontend.FontendApplicationTests - Starting FontendApplicationTests on DESKTOP-HHR2Q8R with PID 2616 (started by lulu in E:\Program\IDEA\FontEndLearn)
+10:06:06.390 logback [main] INFO  c.f.fontend.FontendApplicationTests - No active profile set, falling back to default profiles: default
+10:06:06.894 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+10:06:06.984 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+10:06:06.992 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+10:06:08.375 logback [main] INFO  c.f.fontend.FontendApplicationTests - Started FontendApplicationTests in 2.443 seconds (JVM running for 3.425)
