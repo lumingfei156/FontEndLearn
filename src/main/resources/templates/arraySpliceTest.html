@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>ArraySplice方法测试</title>
+</head>
+<body>
+    ArraySplice方法测试
+    <script>
+        //删除操作
+        var array = [1,2,3,4,5];
+        var array1 = array.concat();
+        var array2 = array.concat();
+        array.splice(0,1);
+        console.log("array.splice(0,1): " + array);
+        //插入操作
+        array1.splice(0,0,-1,0);
+        console.log("array1.splice(0,0,-1,0): " + array1);
+        //替换操作
+        array2.splice(0,1,0,1);
+        console.log("array.splice(0,1,0,1): " + array2);
+    </script>
+</body>
+</html>
