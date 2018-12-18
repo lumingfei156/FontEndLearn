@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>创建正则实例测试</title>
+</head>
+<body>
+    创建正则实例测试
+    <script>
+        var reg,i;
+        for (i = 0;i < 10;i++){
+            reg = /cat/g;
+            console.log(reg.test("catslkdjjflskkj"));
+        }
+        console.log("通过构造器创建正则表达式");
+        for (i = 0;i < 10;i++){
+            reg = new RegExp("cat","g");
+            console.log(reg.test("catslkdjjflskkj"))
+        }
+
+        reg = /cat/g;
+        console.log( "reg.global: " + reg.global);
+        console.log( "reg.ignoreCase: " + reg.ignoreCase);
+        console.log( "reg.multiline: " + reg.multiline);
+        console.log( "reg.lastIndex: " + reg.lastIndex);
+        console.log( "reg.source: " + reg.source);
+
+    </script>
+</body>
+</html>
