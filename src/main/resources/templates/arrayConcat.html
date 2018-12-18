@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Array副本测试</title>
+</head>
+<body>
+    Array副本测试
+    <script>
+        //通过concat方法复制数组的一个副本
+        var array = [1,2,3,4];
+        var arrayConcat = array.concat(5,6);
+        console.log("array调用concat方法之后: " + array);
+        console.log("arrayConcat: " + arrayConcat);
+        //通过slice方法截取数组
+        var arraySlice = array.slice(0,2);
+        console.log("array调用slice(0,2): " + arraySlice);
+    </script>
+</body>
+</html>
