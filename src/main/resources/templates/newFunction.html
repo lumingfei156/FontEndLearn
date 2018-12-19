@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>创建函数的几种方式</title>
+</head>
+<body>
+    创建函数的几种方式
+    <script>
+        //第一种
+        function sum1(num1,num2) {
+            return num1 + num2;
+        }
+        //第二种
+        var sum2 = function (num1,num2) {
+            return num1 + num2;
+        };
+        //第三种
+        var sum3 = new Function("num1","num2","return num1 + num2;");
+
+        console.log("sum1(1,2): " + sum1(1,2) );
+        console.log("sum2(1,2): " + sum2(1,2) );
+        console.log("sum3(1,2): " + sum3(1,2) );
+
+    </script>
+</body>
+</html>
