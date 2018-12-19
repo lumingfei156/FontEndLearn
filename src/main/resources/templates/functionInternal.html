@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>函数内部属性</title>
+</head>
+<body>
+    函数内部属性
+    <script>
+        //定义callMyself一开始函数
+        var callMyself = function (num) {
+            if(num <= 1){
+                return 1;
+            }else{
+                //如果写成这样，当callMyself指向的函数改变之后就不能实现递归的效果
+                //return num * callMyself(num - 1);
+                return num * arguments.callee(num - 1);
+            }
+        };
+        var trueCallMyself = callMyself;
+        //改变callMyself指向的函数
+        callMyself = function (num) {
+            return 0;
+        };
+        console.log("trueCallMyself(5)； " + trueCallMyself(5));
+        console.log("callMyself(5)； " + callMyself(5));
+
+        //this属性
+        window.objectName = "window";
+        var o = {objectName: "o"}
+        function sayThis(){
+            return this.objectName;
+        }
+        o.sayThis = sayThis;
+        //输出this的指向
+        console.log("sayThis(): " + sayThis());
+        console.log("o.sayThis(): " + o.sayThis());
+
+    </script>
+</body>
+</html>
