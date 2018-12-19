@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>函数的caller属性</title>
+</head>
+<body>
+    函数的caller属性
+    <script>
+        function inner(){
+            console.log("被调用函数通过caller指向调用函数: " + arguments.callee.caller);
+        }
+
+        function outer() {
+            inner();
+        }
+        console.log("通过函数调用函数: ");
+        outer();
+    </script>
+</body>
+</html>
