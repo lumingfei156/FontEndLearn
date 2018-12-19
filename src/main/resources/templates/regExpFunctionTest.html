@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式实例方法</title>
+</head>
+<body>
+    正则表达式实例方法
+    <script>
+        var regExp = /mon (and dad (and baby)?)?/gi;
+        var str = "ss sss ss dfd mon and dad and baby";
+        var matches = regExp.exec(str);
+        console.log("捕获到的内容可以根据matches的属性显示");
+        console.log("捕获的起始位置matches.index :" + matches.index);
+        console.log("输入的字符串matches.input: " + matches.input);
+        console.log("捕获组，可以理解成有多少个子正则表达式，也就是括号:");
+        console.log("matches[0]: " + matches[0]);
+        console.log("matches[1]: " + matches[1]);
+        console.log("matches[2]: " + matches[2]);
+
+        //使用test方法
+        console.log("使用test方法");
+        console.log("regExp.test(str)" + regExp.test(str));
+        console.log("regExp.toLocaleString(): " + regExp.toLocaleString());
+    </script>
+</body>
+</html>
