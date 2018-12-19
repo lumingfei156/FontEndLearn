@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>函数属性和方法</title>
+</head>
+<body>
+    函数属性和方法
+    <script>
+        function sayThis(str) {
+            console.log("传入的参数为: " + str);
+            console.log("当前调用对象的objectName为: " + this.objectName);
+        }
+
+        function sum(num1,num2) {
+            return num1 + num2;
+        }
+
+        window.objectName = "window";
+        var o = {objectName : "o"};
+
+        console.log("输出sum.length属性: " + sum.length);
+
+        console.log("\n");
+
+        console.log("通过apply传入参数和更改调用对象");
+        console.log("sayThis.apply(window,[\"window\"]): ");
+        sayThis.apply(window,["window"]);
+
+        console.log("\n");
+
+        console.log("sayThis.apply(o,[\"o\"]): ");
+        sayThis.apply(o,["o"]);
+
+        console.log("\n");
+
+        console.log("通过call传入参数和更改调用对象");
+        console.log("sayThis.call(window,\"window\")");
+        sayThis.call(window,"window");
+
+        console.log("\n");
+
+        console.log("sayThis.call(o,\"o\")");
+        sayThis.call(o,"o");
+
+        console.log("\n");
+
+        console.log("通过bind方法修改this对象");
+        console.log("sayThis.bind(o)");
+        var newSayThis = sayThis.bind(o);
+        newSayThis();
+    </script>
+</body>
+</html>
