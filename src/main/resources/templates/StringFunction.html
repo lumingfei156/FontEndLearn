@@ -10,6 +10,88 @@
         console.log("String(\"hello\"): " + String("hello"));
         console.log("String(null): " + String(null));
         console.log("String(undefined): " + String(undefined));
+
+        console.log("字符方法:");
+        var str = "hello world";
+        console.log("str: " + str);
+        console.log(" str.charAt(1): " + str.charAt(1));
+        console.log("str.charCodeAt(1): " + str.charCodeAt(1));
+        console.log("str[1]: " + str[1]);
+
+        console.log("字符串操作方法: ");
+        var hello = "hello ";
+        console.log("hello: " + hello);
+        console.log("hello.concat(\"world!\"): " + hello.concat("world!"));
+        console.log( "hello.substring(0,1): "+ hello.substring(0,1));
+        console.log( "hello.slice(0,1): "+ hello.slice(0,1));
+        console.log( "hello.substr(0,1): "+ hello.substr(0,1));
+
+        console.log("当传入的参数为负数的时候: ");
+        var helloWorld = "hello world";
+        console.log("helloWorld: " + helloWorld);
+        console.log("helloWorld.length: "+ helloWorld.length);
+        console.log("将负值与字符串长度相加:helloWorld.slice(-3): "+ helloWorld.slice(-3));
+        console.log("将第一个负值参数与字符串长度相加:helloWorld.substr(-3): "+ helloWorld.substr(-3));
+        console.log("将所有负值转换为0:helloWorld.substring(-3): "+ helloWorld.substring(-3));
+
+        console.log("负值也和字符串长度相加:helloWorld.slice(3,-4): "+ helloWorld.slice(3,-4));
+        console.log("第二个负值转换为0:helloWorld.substr(3,-4): "+ helloWorld.substr(3,-4));
+        console.log("所有负值转换为0:helloWorld.substring(3,-4): "+ helloWorld.substring(3,-4));
+
+        console.log("字符串模式匹配方法: ");
+        var text = "cat, bat, sat, fat";
+        var pattern = /.at/g;
+        var matches = text.match(pattern);
+        console.log("text: " + text);
+        console.log("pattern: " + pattern);
+        console.log("matches.index: " + matches.index);
+        console.log("matches.input: " + matches.input);
+        console.log("pattern.lastIndex: " + pattern.lastIndex);
+        console.log("matches[0]: " + matches[0]);
+        console.log("text.search(pattern): " + text.search(pattern));
+        console.log("text.replace(pattern,\"ss($&)\"): " + text.replace(pattern,"ss($&)"));
+        console.log("向replace()中传递函数: ");
+        var htmlStr = "<p class=\"greeting\">Hello World!</p>";
+        var htmlPattern = /[<>"&]/g;
+        console.log("htmlPattern: " + htmlPattern);
+        console.log("htmlStr: " + htmlStr);
+        var s = htmlStr.replace(htmlPattern,function (matches,matchIndex,originalText) {
+            switch (matches){
+                case "<":
+                    return "&lt;";
+                case ">":
+                    return "&gt;";
+                case "&":
+                    return "&amp;";
+                case "\"":
+                    return "&quot;";
+            }
+        });
+        console.log("htmlStr.replace(htmlPattern,function (matches,matchIndex,originalText) {\n" +
+            "            switch (matches){\n" +
+            "                case \"<\":\n" +
+            "                    return \"&lt;\";\n" +
+            "                case \">\":\n" +
+            "                    return \"&gt;\";\n" +
+            "                case \"&\":\n" +
+            "                    return \"&amp;\";\n" +
+            "                case \"\\\"\":\n" +
+            "                    return \"&quot;\";\n" +
+            "            }\n" +
+            "        });");
+        console.log(s);
+
+        console.log("使用splice()分割函数: ");
+        var color = "red,blue,green,yellow";
+        var splitPattern = /[^,]+/g;
+        var colorArray1 = color.split(",");
+        var colorArray2 = color.split(",",2);
+        var colorArray3 = color.split(splitPattern);
+        console.log("color: " + color);
+        console.log("splitPattern: " + splitPattern);
+        console.log("color.split(\",\")" + colorArray1.toString());
+        console.log("color.split(\",\",2)" + colorArray2.toString());
+        console.log("color.split(splitPattern): " + colorArray3);
     </script>
 </body>
 </html>
