@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象数据属性</title>
+</head>
+<body>
+    面向对象数据属性
+    <script>
+        var person = {};
+        Object.defineProperty(person,"name",{configurable : false, value : "Hashaki"});
+        console.log("person.name: " + person.name);
+        delete person.name;
+        console.log("person.name: " + person.name);
+
+        var person1 = {};
+        Object.defineProperty(person1,"name",{writable : false, value : "Hashaki1"});
+        console.log("person1.name: " + person1.name);
+        person1.name = "changeName";
+        console.log("person1.name: " + person1.name);
+    </script>
+</body>
+</html>
