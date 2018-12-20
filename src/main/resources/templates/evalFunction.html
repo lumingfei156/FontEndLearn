@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>eval方法</title>
+</head>
+<body>
+    eval方法
+    <script>
+        eval("function sayHello() {\n" +
+            "            console.log(\"hello world!\");\n" +
+            "        }");
+        console.log("调用sayHello()方法：");
+        sayHello();
+    </script>
+</body>
+</html>
