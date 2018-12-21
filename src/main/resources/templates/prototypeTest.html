@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>原型对象测试</title>
+</head>
+<body>
+    原型对象测试
+    <script>
+        function Person() {
+        }
+        Person.prototype.name = "lulu";
+        Person.prototype.age = 20;
+        Person.prototype.sex = "男";
+        Person.prototype.sayName = function () {
+            console.log(this.name);
+        };
+
+        var p1 = new Person();
+        var p2 = new Person();
+        console.log("调用p1的sayName()方法: ");
+        p1.sayName();
+        console.log("调用p2的sayName()方法: ");
+        p2.sayName();
+        console.log("p1.name === p2.name: " + (p1.name === p2.name));
+        console.log("Person.prototype.isPrototypeOf(p2): " + Person.prototype.isPrototypeOf(p2));
+        console.log("p1.hasOwnProperty(\"name\"): " + p1.hasOwnProperty("name"));
+        console.log("主动为p2设置一个name属性");
+        p2.name = "newName";
+        console.log("p2.hasOwnProperty(\"name\"): " + p2.hasOwnProperty("name"));
+
+        console.log("使用in操作符");
+        console.log("\"name\" in p1: " );
+        console.log("name" in p1);
+        console.log("\"name\" in p2: ");
+        console.log("name" in p1);
+        console.log("通过for-in循环获得对象可枚举属性");
+        for (var s in p2){
+            console.log(s);
+        }
+
+        console.log("Object.keys(Person.prototype): " + Object.keys(Person.prototype));
+    </script>
+</body>
+</html>
