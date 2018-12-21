@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>访问器属性</title>
+</head>
+<body>
+    访问器属性
+    <script>
+        var o = {
+                    _year : 2004,
+                    edition : 1,
+                    test : 2006
+                };
+        var definePro = {
+            get : function () {
+                return this._year;
+            },
+
+            set : function (newValue) {
+                var temp = this._year;
+                if (newValue > temp){
+                    this._year = newValue;
+                    this.edition += newValue - temp;
+                }
+            }
+        };
+
+        //通过Object.defineProperty()方法修改访问器属性
+        Object.defineProperty(o,"year",definePro);
+        o.year = 2005;
+        console.log("修改year的值为:o.year: " + o.year);
+        console.log("修改后，查看版本号o.edition: " + o.edition);
+
+        console.log("定义多个属性: ");
+        var book = {};
+        var defineProes = {
+            _year : {
+                value : 2004,
+                writable : true
+            },
+            edition : {
+                value : 1,
+                writable : true
+            },
+            year : {
+                get : function () {
+                    return this._year
+                },
+                set : function (newValue) {
+                    var temp = this._year;
+                    if(newValue > temp){
+                        this._year = newValue;
+                        this.edition += this._year - temp;
+                    }
+                }
+            }
+        };
+        Object.defineProperties(book,defineProes);
+        book.year = 2005;
+        console.log("将对象的year属性设为2005,book.year: " + book.year);
+        console.log("输出book.edition: " + book.edition);
+
+        console.log("通过Object.getOwnPropertyDescriptor方法读取属性特性");
+        console.log("Object.getOwnPropertyDescriptor(book,\"_year\")");
+        var result = Object.getOwnPropertyDescriptor(book,"_year");
+        console.log("result.value: " + result.value);
+        console.log("result.configurable: " + result.configurable);
+        console.log("typeof result.get: "+ typeof result.get);
+
+        console.log("Object.getOwnPropertyDescriptor(book,\"year\")");
+        var result2 = Object.getOwnPropertyDescriptor(book,"year");
+        console.log("result2.value: " + result2.value);
+        console.log("result2.configurable: " + result2.configurable);
+        console.log("typeof result2.get: "+ typeof result2.get);
+    </script>
+</body>
+</html>
