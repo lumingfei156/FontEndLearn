@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>构造器创建对象</title>
+</head>
+<body>
+    构造器创建对象
+    <script>
+        //建立构造器
+        function Person(name,age,sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.sayName = function () {
+                return this.name;
+            };
+        }
+        var p1 = new Person("lulu",29,"男");
+        var p2 = new Person("faker",30,"woman");
+        console.log("p1.sayName(): " + p1.sayName());
+        console.log("p2.sayName(): " + p2.sayName());
+
+        console.log("p1.constructor === Person: ");
+        console.log(p1.constructor === Person);
+        console.log("p1 instanceof Person: " );
+        console.log(p1 instanceof Person)
+        console.log("p1 instanceof Object: " );
+        console.log(p1 instanceof Object);
+
+    </script>
+</body>
+</html>
