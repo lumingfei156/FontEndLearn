@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>寄生构造模式</title>
+</head>
+<body>
+    寄生构造模式
+    <script>
+        function Person(name,age,sex) {
+            var o = new Object();
+            o.name = name;
+            o.age = age;
+            o.sex = sex;
+            o.sayName = function () {
+                return this.name;
+            };
+            return o;
+        }
+
+        var p = new Person("lulu",20,"man");
+        console.log("p.sayName(): " + p.sayName());
+
+        console.log("通过寄生构造模式创建带特殊方法的数组 ");
+        function SpecialArray() {
+            var array = new Array();
+            array.push.apply(array,arguments);
+
+            array.toPipeString = function () {
+                return this.join(",");
+            };
+            return array;
+        }
+
+        var array = new SpecialArray(1,2,3,4,5);
+        console.log(" array.toPipeString(): " + array.toPipeString());
+
+
+    </script>
+</body>
+</html>
