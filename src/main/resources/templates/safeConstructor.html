@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>稳妥构造函数模式</title>
+</head>
+<body>
+    稳妥构造函数模式
+    <script>
+        function SafePerson(name,age,sex) {
+            var p = new Object();
+
+            p.sayName = function () {
+                return name;
+            };
+
+            p.sayAge = function () {
+                return  age;
+            };
+
+            p.saySex = function () {
+                return  sex;
+            };
+            return p;
+        }
+
+        var p = new SafePerson("路路",20,"男");
+       console.log( " p.sayName(): " + p.sayName());
+       console.log( " p.name: " + p.name);
+    </script>
+</body>
+</html>
