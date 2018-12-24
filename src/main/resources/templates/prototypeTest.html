@@ -40,6 +40,40 @@
         }
 
         console.log("Object.keys(Person.prototype): " + Object.keys(Person.prototype));
+
+        //也可以通过重写整个原型对象的方式设置原型值
+        console.log("通过重写原型对象设置属性");
+        function OverWirtePro() {}
+        OverWirtePro.prototype = {
+            name : "overWritePro",
+            sayName : function () {
+                console.log(this.name);
+            },
+            constructor : OverWirtePro
+        };
+
+        var overWritePro = new OverWirtePro();
+        console.log("overWritePro.name: " + overWritePro.name);
+        console.log("overWritePro.sayName(): ");
+        overWritePro.sayName();
+        Object.defineProperty(OverWirtePro.prototype,"constructor",{enumerable : false,value : OverWirtePro});
+        console.log("通过for-in循环，可以枚举的属性");
+        for(temp in overWritePro){
+            console.log(temp);
+        }
+
+        console.log("原型对象动态性");
+        function DynamicPrototype () {}
+        var dynamicPro = new DynamicPrototype();
+        DynamicPrototype.prototype.name = "DynamicPrototype";
+        console.log("dynamicPro.name: " + dynamicPro.name);
+
+        console.log("通过重写原型对象，设置属性");
+        function DynamicOverPrototype() {}
+        var newDyanamic = new DynamicOverPrototype();
+        DynamicOverPrototype.prototype = {name : "DynamicOverPrototype"};
+        console.log("newDyanamic.name: " + newDyanamic.name);
+
     </script>
 </body>
 </html>
