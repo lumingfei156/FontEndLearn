@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>原型式继承</title>
+</head>
+<body>
+    原型式继承
+    <script>
+        function object(o) {
+            function F() {}
+            F.prototype = o;
+            return new F();
+        }
+        var person = {
+            name : "lulu",
+            age : 30};
+        var anotherPerson = object(person);
+        console.log("anotherPerson.name: ",anotherPerson.name);
+
+        var obCreatePerson = Object.create(person);
+        console.log("obCreatePerson.name: ",obCreatePerson.name);
+    </script>
+</body>
+</html>
