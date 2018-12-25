@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>原型链继承</title>
+</head>
+<body>
+    原型链继承
+    <script>
+        function SuperType() {
+            this.property = true;
+        }
+
+        SuperType.prototype.getSuperProperty = function () {
+            return this.property;
+        };
+
+        function SubType() {
+            this.subProperty = false;
+        }
+        //继承SuperType
+        SubType.prototype = new SuperType();
+
+        SubType.prototype.getSubProperty = function () {
+            return this.subProperty;
+        };
+
+        var instance = new SubType();
+        console.log("instance.getSuperProperty(): " + instance.getSuperProperty());
+        console.log("instance.getSubProperty(): " + instance.getSubProperty());
+
+        console.log("instance instanceof Object: ",instance instanceof Object);
+        console.log("instance instanceof SuperType: ",instance instanceof SuperType);
+        console.log("instance instanceof SubType: ",instance instanceof SubType);
+
+        console.log("Object.prototype.isPrototypeOf(instance): ",Object.prototype.isPrototypeOf(instance));
+        console.log("SuperType.prototype.isPrototypeOf(instance): ",SuperType.prototype.isPrototypeOf(instance));
+        console.log("SubType.prototype.isPrototypeOf(instance): ",SubType.prototype.isPrototypeOf(instance));
+
+    </script>
+</body>
+</html>
