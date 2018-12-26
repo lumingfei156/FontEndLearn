@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>特权方法</title>
+</head>
+<body>
+    特权方法
+    <script>
+        function MyObject() {
+            var privateVariable = 10;
+
+            function privateFunction() {
+                return false;
+            }
+            //特权方法
+            this.publicFunction = function () {
+                privateVariable++;
+                return privateFunction();
+            };
+        }
+        var myObject = new MyObject();
+        console.log("myObject.publicFunction(): ",myObject.publicFunction());
+    </script>
+</body>
+</html>
