@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>内存泄漏</title>
+</head>
+<body>
+    <button value="内存泄漏" id = "ss">内存泄漏</button>
+    <script>
+        function assignHandler() {
+            var button = document.getElementById("ss");
+            button.onclick = function (ev) { console.log(button.id); };
+        }
+
+        function improveAssign() {
+            var button = document.getElementById("ss");
+            var id = button.id;
+            button.onclick = function (ev) { console.log(id); }
+            button = null;
+        }
+
+    </script>
+</body>
+</html>
