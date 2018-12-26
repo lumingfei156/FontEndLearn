@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>模仿块级作用域</title>
+</head>
+<body>
+    模仿块级作用域
+    <script>
+        function imitateFunction() {
+            (function () {
+                for(var i = 0;i < 10;i++){
+                    console.log(i);
+                }
+            })();
+            console.log(i);
+        }
+        imitateFunction();
+    </script>
+</body>
+</html>
