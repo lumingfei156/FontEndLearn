@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>静态私有方法</title>
+</head>
+<body>
+    静态私有方法
+    <script>
+        (function () {
+            var name = "";
+            //需要注意的是在严格模式下不允许这样定义
+            Person = function (value) {
+                name = value;
+            };
+
+            Person.prototype.getName = function () {
+                return name;
+            };
+
+            Person.prototype.setName = function (value) {
+                name = value;
+            }
+        })();
+        var p1 = new Person("lulu");
+        var p2 = new Person("王大锤");
+
+        console.log("p1.getName(): ",p1.getName());
+        console.log("p2.getName(): ",p2.getName());
+    </script>
+</body>
+</html>
