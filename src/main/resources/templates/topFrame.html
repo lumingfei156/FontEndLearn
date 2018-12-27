@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>topFram</title>
+</head>
+<body>
+    上框架
+</body>
+    <script>
+        top.frames["topFrame"].document.write("向顶部框架写入p标签");
+        // top.frames[0].window.document.write("向顶部框架写入p标签");
+
+        top.frames["leftFrame"].document.write("向左框架写入p标签");
+        // top.frames[1].window.document.write("向左框架写入p标签");
+
+        // top.frames["rightFrame"].document.write("向右框架写入p标签");
+        // top.frames[2].window.document.write("向右框架写入p标签");
+    </script>
+
+</html>
