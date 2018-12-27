@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象的位置</title>
+</head>
+<body>
+    window对象的位置
+    <script>
+        var left = (typeof window.screenLeft === "number")? window.screenLeft:window.screenX;
+        var top = (typeof window.screenTop === "number")? window.screenTop:window.screenY;
+
+        console.log(left);
+        console.log(top);
+
+        window.moveTo(1000,1000);
+        window.moveBy(1000,1000);
+
+
+    </script>
+</body>
+</html>
