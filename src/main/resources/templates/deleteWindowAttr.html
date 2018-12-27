@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>删除window对象的属性</title>
+</head>
+<body>
+    删除window对象的属性
+    <script>
+        var age = 29;
+        window.color = "lulu";
+        //在IE9以下的版本会报错,其他浏览器return false
+        delete window.age;
+        //在IE9以下的版本报错，其他浏览器return true;
+        delete window.color;
+
+        console.log("window.age: ",window.age);
+        console.log("window.color: ",window.color);
+    </script>
+</body>
+</html>
