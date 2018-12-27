@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打开窗口</title>
+</head>
+<body>
+打开窗口
+<button id = "button">关闭</button>
+<script>
+    var wroWin = window.open("red.html","wroWin","height=400,width=400,resizable=yes");
+    wroWin.resizeTo(500,500);
+    wroWin.moveTo(100,100);
+    var button = document.getElementById("button");
+    button.onclick = function (ev) { wroWin.close(); }
+</script>
+</body>
+</html>
