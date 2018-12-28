@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过location来跳转页面</title>
+</head>
+<body>
+    通过location来跳转页面
+    <script>
+       window.setTimeout(function () {
+           //2秒后跳转到red页面
+           // location.assign("red.html");
+           // window.location = "red.html";
+           // location.href = "red.html";
+           //禁用后退页面
+           location.replace("red.html");
+           //强制从服务器重新加载页面
+           // location.reload(true);
+           // location.reload();
+       },2000);
+
+    </script>
+</body>
+</html>
