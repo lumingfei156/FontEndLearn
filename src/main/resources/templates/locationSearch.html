@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location对象的search属性</title>
+</head>
+<body>
+    location对象的search属性
+    <script>
+        function getQueryArgs() {
+            //获取URL中类似的字符串"?xxs=sskj&xxx=xxx"
+            var qs = (location.search.length > 0) ? location.search.substring(1) : "";
+            var args = {};
+            //将查询字符串用&分割，形成存放name=value的数组
+            var items = qs.length ? qs.split("&") : [];
+
+            var item = null;
+            var name = null;
+            var value = null;
+            //循环遍历，将每个name和value放入args对象中
+            for(var i = 0;i < items.length;i++){
+                item = items[i].split("=");
+                name = decodeURIComponent(item[0]);
+                value = decodeURIComponent(item[1]);
+                args[name] = value;
+            }
+            return args;
+        }
+
+        var args = getQueryArgs();
+        console.log("args中存在");
+        for (var temp in args){
+            console.log("name: ",temp," value: ",args[temp]);
+        }
+    </script>
+</body>
+</html>
