@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检测插件</title>
+</head>
+<body>
+    检测插件
+    <script>
+        console.log("输出本浏览器所安装的插件");
+        for (var i = 0;i < navigator.plugins.length;i++){
+            console.log(navigator.plugins[i].name);
+        }
+        console.log("\n");
+        console.log("isHasPlugins(\"Chrome PDF Plugin\"): ",isHasPlugins("Chrome PDF Plugin"));
+        console.log("isHasPlugins(\"Flash\"): ",isHasPlugins("Flash"));
+
+
+
+        function isHasPlugins(name) {
+            var flag = false;
+            var lowerName = name.toLowerCase();
+            for (var i = 0;i < navigator.plugins.length;i++){
+                var lowerTemp = navigator.plugins[i].name.toLowerCase();
+                if (lowerName === lowerTemp){
+                    flag = true;
+                }
+            }
+            return flag;
+        }
+        console.log("isHasIEPlugins(\"ShockwaveFlash.ShockwaveFlash\"): ",isHasIEPlugins("ShockwaveFlash.ShockwaveFlash"));
+        function isHasIEPlugins(name) {
+            try {
+                new ActiveXObject(name);
+                return true;
+            }catch (ex){
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
