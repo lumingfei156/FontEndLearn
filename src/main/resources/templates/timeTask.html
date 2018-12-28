@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时任务</title>
+</head>
+<body>
+    定时任务
+    <script>
+        var timeID1 = window.setTimeout(function () {
+            console.log("通过function形式执行定时任务!!");
+        },1000);
+
+        var timeID2 = window.setTimeout("console.log(\"通过function字符串形式执行定时任务!!\");",2000);
+
+        var timeID3 = window.setTimeout(function () {
+            console.log("通过timeID3取消定时任务的执行，所以控制台不能看到这条输出！");
+        },4000);
+        window.clearTimeout(timeID3);
+
+        var intervalID = window.setInterval(function () {
+            console.log("通过间歇调用执行定时任务");
+        },1000);
+
+        window.setTimeout(function () {
+            console.log("10秒之后取消间歇任务的执行");
+            window.clearTimeout(intervalID);
+        },10000);
+    </script>
+</body>
+</html>
