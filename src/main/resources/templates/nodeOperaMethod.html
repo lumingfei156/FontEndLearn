@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node的操作方法</title>
+</head>
+<body>
+    <div id="parentNode">
+        <p id="firstNode">第一个节点</p>
+        <strong id="lastNode">最后的节点</strong>
+    </div>
+    <script>
+        window.setTimeout(function () {
+            var parentNode = document.getElementById("parentNode");
+            var toBeLast = parentNode.childNodes[1];
+            parentNode.appendChild(toBeLast);
+        },1000);
+
+        window.setTimeout(function () {
+            var parentNode = document.getElementById("parentNode");
+            //将最后一个节点,就是p标签
+            var pNode = parentNode.lastChild;
+            //strong标签
+            var strong = parentNode.childNodes[2];
+            parentNode.insertBefore(pNode,strong);
+        },3000);
+    </script>
+</body>
+</html>
