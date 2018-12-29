@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node属性</title>
+</head>
+<body id="body">
+    <p id="pTest">这是一个p标签</p>
+    <strong>你好啊！！！</strong>
+    <script>
+        var pTest = document.getElementById("pTest");
+        console.log("pTest.nodeType: ",pTest.nodeType);
+        console.log("pTest.nodeName: ",pTest.nodeName);
+        console.log("pTest.nodeValue: ",pTest.nodeValue);
+
+        console.log("childNode的属性和方法");
+        var body = document.getElementById("body");
+        var nodeList = body.childNodes;
+        console.log("nodeList.length: " ,nodeList.length);
+        console.log("nodeList[0].nodeName: " ,nodeList[0].nodeName);
+        console.log("nodeList.item(0).nodeName: " ,nodeList.item(0).nodeName);
+
+    </script>
+</body>
+</html>
