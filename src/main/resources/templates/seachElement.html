@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素引用</title>
+</head>
+<body>
+    <p id = "pElement">p标签</p>
+    <p id="pElement2">第二个p标签</p>
+    <strong id="strongElement">strong标签</strong>
+    <br/><br/>
+    <fieldset>
+        <legend>你最喜欢哪种颜色？</legend>
+        <ul>
+            <li><input id="colorRed" value="red" name="color" type="radio"><label for="colorRed">红色</label></li>
+            <li><input id="colorGreen" value="green" name="color" type="radio"><label for="colorGreen">绿色</label></li>
+            <li><input id="colorBlue" value="blue" name="color" type="radio"><label for="colorBlue">蓝色</label></li>
+        </ul>
+    </fieldset>
+
+    <script>
+
+        window.setTimeout(function () {
+            var pElement = document.getElementById("pElement");
+            var strongElement = document.getElementById("strongElement");
+
+            pElement.innerHTML = "修改后p标签的内容";
+            strongElement.innerHTML = "修改后strong标签的内容";
+        },1000);
+
+        window.setTimeout(function () {
+            var pElements = document.getElementsByTagName("p");
+            console.log("pElements.length: ",pElements.length);
+            var p1 = pElements[0];
+            var p1Another = pElements["pElement"];
+            console.log("p1 === p1Another: ",p1 === p1Another);
+        },2000)
+
+        var radios = document.getElementsByName("color");
+        console.log("radios.length: ",radios.length);
+
+    </script>
+</body>
+</html>
