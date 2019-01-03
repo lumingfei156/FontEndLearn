@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLElement类型的attributes属性</title>
+</head>
+<body>
+    <p id="pId" lang="en" dir = ltr>这是个p标签</p>
+    <script>
+        var p = document.getElementById("pId");
+        console.log("p.attributes.getNamedItem(\"id\").nodeValue: ",p.attributes.getNamedItem("id").nodeValue);
+        console.log("p.attributes.item(1).nodeValue: ",p.attributes.item(1).nodeValue);
+        p.attributes.removeNamedItem("lang");
+        console.log("p.attributes.getNamedItem(\"lang\"): ",p.attributes.getNamedItem("lang"));
+
+        console.log("通过attributes遍历元素属性集合");
+        for(var i = 0;i < p.attributes.length;i++){
+            console.log("元素属性名: ",p.attributes[i].nodeName,", 属性值: ",p.attributes[i].nodeValue );
+        }
+
+    </script>
+</body>
+</html>
