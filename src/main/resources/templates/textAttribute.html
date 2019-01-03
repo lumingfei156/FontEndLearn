@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本类型属性</title>
+</head>
+<body>
+<!--没有内容，没有文本节点-->
+<div id="div1"></div>
+<!--没有内容但是有一个空格，有一个文本节点-->
+<div id="div2"> </div>
+<!--有内容,所以有一个文本节点-->
+<div id="div3">Hello World!!!</div>
+
+<script>
+    var div1 = document.getElementById("div1");
+    console.log("div1.childNodes.length: ",div1.childNodes.length);
+
+    var div2 = document.getElementById("div2");
+    console.log("div2.childNodes.length: ",div2.childNodes.length);
+    console.log("div2.childNodes[0].nodeName: ",div2.childNodes[0].nodeName," ","div2.childNodes[0].nodeValue: ",div2.childNodes[0].nodeValue);
+    div2.childNodes[0].appendData("后添加进去的!!");
+    console.log("div2.childNodes[0].nodeName: ",div2.childNodes[0].nodeName," ","div2.childNodes[0].nodeValue: ",div2.childNodes[0].nodeValue);
+
+    var div3 = document.getElementById("div3");
+    console.log("div3.childNodes.length: ",div3.childNodes.length);
+    console.log("div3.childNodes[0].nodeName: ",div3.childNodes[0].nodeName," ","div3.childNodes[0].nodeValue: ",div3.childNodes[0].nodeValue);
+</script>
+</body>
+</html>
