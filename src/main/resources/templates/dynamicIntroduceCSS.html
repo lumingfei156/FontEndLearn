@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态引入样式文件</title>
+</head>
+<body>
+    <script>
+        var head = document.getElementsByTagName("head")[0];
+
+        window.setTimeout(function () {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "../static/css/dynamicIntorduceCSS.css";
+            link.type = "text/css";
+            head.appendChild(link);
+        },1000);
+
+        window.setTimeout(function () {
+            var style = document.createElement("style");
+            style.type = "text/css";
+            try{
+                style.appendChild(document.createTextNode("body{\n" +
+                    "    background-color: blue;\n" +
+                    "}"));
+            }catch(ex){
+                style.styleSheet.cssText = "body{\n" +
+                    "    background-color: blue;\n" +
+                    "}";
+            }
+            head.appendChild(style);
+        },2000);
+
+    </script>
+</body>
+</html>
