@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建文本节点</title>
+</head>
+<body>
+    <div id="div"></div>
+
+    <script>
+        var div = document.getElementById("div");
+        var textNode = document.createTextNode("你好,我是新添加的节点!!");
+
+        window.setTimeout(function () {
+            div.appendChild(textNode);
+            var textNode2 = document.createTextNode("?????");
+            div.appendChild(textNode2);
+            console.log("div.childNodes.length: ",div.childNodes.length);
+            div.normalize();
+            console.log("调用normalize()方法之后");
+            console.log("div.childNodes.length: ",div.childNodes.length);
+        },1000);
+
+    </script>
+</body>
+</html>
