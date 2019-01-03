@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态引入js脚本</title>
+</head>
+<body>
+    <p>动态引入js脚本</p>
+    <script>
+        console.log("现在开始创建script标签");
+        window.setTimeout(function () {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "../static/js/dynamicIntroduceJS.js";
+            document.body.appendChild(script);
+        },1000);
+    </script>
+</body>
+</html>
