@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的SelectAPI</title>
+</head>
+<body>
+    <p id="pId">p标签，id选择器</p>
+    <p class = "pClass">p标签，类选择器</p>
+    <strong>strong标签，标签选择器</strong>
+
+    <script>
+        //通过querySelector选择元素
+        window.setTimeout(function () {
+            var pId = document.querySelector("#pId");
+            var pClass = document.querySelector(".pClass");
+            var strong = document.querySelector("strong");
+
+            pId.childNodes[0].nodeValue = "p标签，id选择器--->修改了";
+            pClass.childNodes[0].nodeValue = "p标签，类选择器--->修改了";
+            strong.childNodes[0].nodeValue = "strong标签，标签选择器--->修改了";
+        },1000);
+
+        //通过querySelectorAll方法选择元素
+        window.setTimeout(function () {
+            var pNodeList = document.querySelectorAll("p");
+            pNodeList[0].childNodes[0].nodeValue = "p标签，id选择器--->querySelectorAll修改";
+            pNodeList[1].childNodes[0].nodeValue = "p标签，类选择器--->querySelectorAll修改";
+        },2000);
+
+    </script>
+</body>
+</html>
