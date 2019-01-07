@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node类型的变化</title>
+</head>
+<body>
+    <script>
+        var div1 = document.createElement("div");
+        div1.setAttribute("class","div");
+
+        var div2 = document.createElement("div");
+        div2.setAttribute("class","div");
+
+        console.log("div1.isEqualNode(div1): ",div1.isEqualNode(div1));
+        console.log("div1.isEqualNode(div2): ",div1.isEqualNode(div2));
+        console.log("div1.isSameNode(div2): ",div1.isSameNode(div2));
+
+        var div3 = document.createElement("div");
+        div3.setUserData("name","lulu",function (opteration,key,value,src,dest) {
+            dest.setUserData(key,value,function () {});
+        });
+        var newNode = div3.cloneNode(true);
+        console.log(newNode.getUserData("name"));
+    </script>
+</body>
+</html>
