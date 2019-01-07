@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入标记</title>
+</head>
+<body>
+    <div id="div">
+        <p>这里有一个ul标记，ul里面有三个li标记</p>
+        <ul>
+            <li>项目1</li>
+            <li>项目2</li>
+            <li>项目3</li>
+        </ul>
+    </div>
+    <script>
+        var div = document.getElementById("div");
+        console.log("div.innerHTML: ",div.innerHTML);
+        window.setTimeout(function () {
+            div.innerHTML = "<strong>那些你很冒险的梦，我陪你去疯</strong>";
+        },1000);
+
+        window.setTimeout(function () {
+            console.log("div.outerHTML: ",div.outerHTML);
+            div.outerHTML = "<strong>折纸飞机碰到雨天，终究会坠落</strong>";
+        },2000);
+
+
+    </script>
+</body>
+</html>
