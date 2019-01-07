@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面滚动</title>
+</head>
+<body>
+    <script>
+        var temp;
+        for(var i = 0;i < 100;i++){
+            temp = document.createElement("div");
+            temp.innerHTML = "hello world";
+            document.body.appendChild(temp);
+        }
+        var toView = document.createElement("strong");
+        toView.innerHTML = "你决定不恨了，也决定不爱了";
+        document.body.appendChild(toView);
+        toView.scrollIntoView(true);
+    </script>
+</body>
+</html>
