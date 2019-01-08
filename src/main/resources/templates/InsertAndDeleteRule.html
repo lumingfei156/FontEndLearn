@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insertRule方法和deleteRule方法</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        var sheet = document.styleSheets[0];
+        window.setTimeout(function () {
+            sheet.insertRule("body{background-color: aqua;}",0);
+        },1000);
+
+        window.setTimeout(function () {
+            sheet.deleteRule(0);
+        },2000);
+
+
+    </script>
+</body>
+</html>
