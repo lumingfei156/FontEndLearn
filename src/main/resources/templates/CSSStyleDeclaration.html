@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSSStyleDeclaration对象</title>
+
+    <style type="text/css">
+        #myDiv{
+            background-color: blue;
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv" style="background-color: rebeccapurple;border: 1px solid black">
+        hello world!!!
+    </div>
+
+    <script>
+        var myDiv = document.getElementById("myDiv");
+        var CSSStyleDeclaration = document.defaultView.getComputedStyle(myDiv,null);
+        console.log("CSSStyleDeclaration.backgroundColor: ",CSSStyleDeclaration.backgroundColor);
+        console.log("CSSStyleDeclaration.width: ",CSSStyleDeclaration.width);
+        console.log("CSSStyleDeclaration.height: ",CSSStyleDeclaration.height);
+        console.log("CSSStyleDeclaration.border: ",CSSStyleDeclaration.border);
+    </script>
+</body>
+</html>
