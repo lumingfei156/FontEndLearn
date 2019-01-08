@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>偏移量offset属性</title>
+</head>
+<body>
+    <div id="div1" style="background-color: blue;width: 200px;margin-top: 100px ;margin-left: 100px;height: 200px;">
+        <div id="div2" style="background-color: red;margin-top: 100px;margin-left: 100px;width: 50px;height: 50px;text-align: center;position: absolute">
+                卡特
+        </div>
+    </div>
+
+    <script>
+        var div2 = document.getElementById("div2");
+        console.log("getElementLeft(div2): ",getElementLeft(div2));
+        console.log("getElementTop(div2): ",getElementTop(div2));
+
+
+        //获取元素距离页面的左边距
+        function getElementLeft (element) {
+            //首先获取元素距离包含对象的左边距和他的包含对象.
+            var actualLeft = element.offsetLeft;
+            var current = element.offsetParent;
+            while (current !== null){
+                actualLeft += current.offsetLeft;
+                current = current.offsetParent;
+            }
+            return actualLeft;
+        }
+
+        //获取元素距离页面的上边距
+        function getElementTop (element) {
+            //首先获取元素距离包含对象的左边距和他的包含对象.
+            var actualTop = element.offsetTop;
+            var current = element.offsetParent;
+            while (current !== null){
+                actualTop += current.offsetTop;
+                current = current.offsetParent;
+            }
+            return actualTop;
+        }
+    </script>
+</body>
+</html>
