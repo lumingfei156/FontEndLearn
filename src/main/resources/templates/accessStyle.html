@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问元素style属性</title>
+</head>
+<body>
+    <p style="align-content: center" id="pId">legends never die</p>
+    <script>
+        var p = document.getElementById("pId");
+        console.log("p.style.alignContent: ",p.style.alignContent);
+        window.setTimeout(function () {
+            p.style.border = "1px solid black";
+            p.style.backgroundColor = "red";
+        },1000)
+    </script>
+</body>
+</html>
