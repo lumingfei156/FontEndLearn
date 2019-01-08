@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSSStyleRule对象属性</title>
+    <style>
+        #myDiv{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+
+    </div>
+
+    <script>
+        var sheets = document.styleSheets[0];
+        //取得CSS的第0条规则
+        var rule = sheets.cssRules[0];
+        //当前规则的完整代码
+        console.log("rule.cssText: ",rule.cssText);
+        console.log("rule.style.cssText: ",rule.style.cssText);
+        console.log("rule.style.backgroundColor: ",rule.style.backgroundColor);
+        //当前规则的选择符文本
+        console.log("rule.selectorText: ",rule.selectorText);
+        //规则类型的常量值
+        console.log("rule.type: ",rule.type);
+
+    </script>
+</body>
+</html>
