@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>styleSheet属性</title>
+    <link rel="stylesheet" href="../static/css/dynamicIntorduceCSS.css">
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        hello world;
+    </div>
+    <script>
+        console.log("document.styleSheets.length: ",document.styleSheets.length);
+        var sheet = null;
+        for(var i = 0;i < document.styleSheets.length;i++){
+            sheet = document.styleSheets[i];
+            console.log(i,".href: ",sheet.href);
+        }
+
+        var link = document.getElementsByTagName("link")[0];
+        console.log("link.sheet.href: ",link.sheet.href);
+
+    </script>
+</body>
+</html>
