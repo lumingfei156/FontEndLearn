@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户区大小</title>
+</head>
+<body>
+    <script>
+        //获取视口大小
+        function getViewPort() {
+            if(document.compatMode === "BackCompat"){
+                return {
+                    width : document.body.clientWidth,
+                    height : document.body.clientHeight
+                }
+            }else {
+                return{
+                    width : document.documentElement.clientWidth,
+                    height : document.documentElement.clientHeight
+                }
+            }
+        }
+
+        var ss = getViewPort();
+        console.log("clientWidth: ",ss.width);
+        console.log("clientHeight: ",ss.height);
+    </script>
+</body>
+</html>
