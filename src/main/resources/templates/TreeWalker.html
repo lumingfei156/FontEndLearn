@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过TreeWalker类型对象辅助遍历DOM</title>
+</head>
+<body>
+    <div id="div1">
+        <p><b>Hello</b> world!!</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        var div1 = document.getElementById("div1");
+        var filterReject = {
+            acceptNode : function (node) {
+                return (node.tagName.toLowerCase() === "li") ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+            }
+        };
+
+        var treeWalker = document.createTreeWalker(div1,NodeFilter.SHOW_ELEMENT,filterReject,false);
+        if(treeWalker.nextNode() === null){
+            console.log("返回的集合中没有任何节点对象");
+        }else{
+            console.log("返回的集合中还是有节点对象的");
+        }
+
+        console.log("通过firstChild()和nextSibling()等方法遍历 ");
+        var treeWalker2 = document.createTreeWalker(div1,NodeFilter.SHOW_ELEMENT,null,false);
+        //currentNode转到p标签
+        treeWalker2.firstChild();
+        //currentNode转到ul标签
+        treeWalker2.nextSibling();
+        var temp = treeWalker2.firstChild();
+        while (temp !== null){
+            console.log("temp.textContent: ",temp.textContent);
+            temp = treeWalker2.nextSibling();
+        }
+
+
+    </script>
+</body>
+</html>
