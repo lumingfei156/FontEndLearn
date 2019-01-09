@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML事件处理程序</title>
+</head>
+<body>
+    <button id="button1" onclick="console.log('点击了按钮1');">按钮1</button>
+    <button id="button2" onclick="">按钮2</button>
+    <button id="button3" onclick="try {buttonClick()}catch (ex){}">按钮3</button>
+
+    <script>
+        //第二种
+        var button2 = document.getElementById("button2");
+        button2.onclick = function (ev) { console.log("点击了按钮2"); };
+        //第三种
+        function buttonClick() {
+            console.log("点击了按钮3");
+        }
+    </script>
+</body>
+</html>
