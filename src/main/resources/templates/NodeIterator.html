@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NodeIterator类型辅助遍历</title>
+</head>
+<body>
+    <div id="div1">
+        <p><b>Hello</b> world!!</p>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        var div1 = document.getElementById("div1");
+        var iterator = document.createNodeIterator(div1,NodeFilter.SHOW_ELEMENT,null,false);
+        var node = iterator.nextNode();
+        console.log("如果不添加过滤器，结果如下: ");
+        while (node !== null){
+            console.log("node.tagName: ",node.tagName);
+            node = iterator.nextNode();
+        }
+
+        console.log("如果添加了过滤器，结果如下: ");
+        var filter = {
+            acceptNode : function (node) {
+                return (node.tagName.toLowerCase() === "li") ?  NodeFilter.FILTER_ACCEPT :  NodeFilter.FILTER_SKIP;
+            }
+        };
+        var itemIter = document.createNodeIterator(div1,NodeFilter.SHOW_ELEMENT,filter,false);
+        var nodeLi = itemIter.nextNode();
+        while (nodeLi !== null){
+            console.log("nodeLi.textContent: ",nodeLi.textContent);
+            nodeLi = itemIter.nextNode();
+        }
+    </script>
+</body>
+</html>
