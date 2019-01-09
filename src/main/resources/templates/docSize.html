@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨浏览器下获取文档内容大小</title>
+</head>
+<body>
+    跨浏览器下获取文档内容大小
+    <script>
+        //获取文档内容总大小
+        function getDocSize() {
+            var height = 0;
+            var width = 0;
+            if(document.compatMode === "BackCompat"){
+                height = Math.max(document.body.clientHeight,document.body.scrollHeight);
+                width = Math.max(document.body.clientWidth,document.body.scrollWidth);
+            }else{
+                height = Math.max(document.documentElement.clientHeight,document.documentElement.scrollHeight);
+                width = Math.max(document.documentElement.clientWidth,document.documentElement.scrollWidth);
+            }
+
+            return {height : height,width : width};
+        }
+
+        var size = getDocSize();
+        console.log("size.height: ",size.height);
+        console.log("size.width: ",size.width);
+        document.body.innerHTML = "size.height: " + size.height + " " + "size.width: " + size.width;
+    </script>
+</body>
+</html>
