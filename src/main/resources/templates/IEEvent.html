@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE事件处理程序</title>
+</head>
+<body>
+    <button id="button1">按钮</button>
+
+    <script>
+        var button = document.getElementById("button1");
+        var handler1 = function () {
+            console.log("明年今日");
+        };
+        var handler2 = function () {
+            console.log("到这日才发现");
+        };
+        button.attachEvent("onclick",handler1);
+        button.attachEvent("onclick",handler2);
+
+
+    </script>
+</body>
+</html>
