@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>为window添加事件处理程序</title>
+</head>
+<body onload="onloadHtml()">
+    <script>
+        window.addEventListener("load",function (ev) { console.log("load Success!! in js"); },false);
+
+        function onloadHtml() {
+            console.log('load Success!! in html');
+        }
+    </script>
+</body>
+</html>
