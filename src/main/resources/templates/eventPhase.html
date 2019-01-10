@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的eventPhase属性</title>
+</head>
+<body>
+    <button id="button">button</button>
+    <script>
+        var button = document.getElementById("button");
+
+        document.body.addEventListener("click",function (event1) {
+            console.log("事件捕获 event1.eventPhase: ",event1.eventPhase);
+        },true);
+
+        button.onclick = function (event2) { console.log("处于目标 event2.eventPhase: ",event2.eventPhase); };
+
+        document.body.addEventListener("click",function (event3) {
+            console.log("事件冒泡 event3.eventPhase",event3.eventPhase);
+        },false)
+    </script>
+</body>
+</html>
