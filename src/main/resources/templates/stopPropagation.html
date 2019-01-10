@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event事件的stopPropagation方法</title>
+</head>
+<body>
+    <div id="div1">
+        <button id="button">button</button>
+    </div>
+<script>
+    var div = document.getElementById("div1");
+    var button = document.getElementById("button");
+
+    div.addEventListener("click",function (event) {
+        console.log("点击了div");
+    },false);
+
+    button.addEventListener("click",function (event) {
+        console.log("点击了button");
+        //停止事件传播
+        event.stopPropagation();
+    },false);
+
+</script>
+</body>
+</html>
