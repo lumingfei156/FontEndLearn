@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event对象的currentTarget和Target属性</title>
+</head>
+<body>
+    <div id="div1">
+        <button id="button">button</button>
+    </div>
+
+    <script>
+        var div = document.getElementById("div1");
+        var button = document.getElementById("button");
+
+        div.addEventListener("click",function (event) {
+            console.log("div this === event.currentTarget: ",this === eventTarget.currentTarget);
+            console.log("div event.currentTarget === event.target: ",eventTarget.currentTarget === eventTarget.target);
+        },false);
+
+        button.addEventListener("click",function (event) {
+            console.log("button this === event.currentTarget: ",this === eventTarget.currentTarget);
+            console.log("button event.currentTarget === event.target: ",eventTarget.currentTarget === eventTarget.target);
+        },false);
+
+    </script>
+</body>
+</html>
