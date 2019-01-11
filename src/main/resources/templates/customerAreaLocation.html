@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件的客户区位置</title>
+</head>
+<body style="width: 100%;height: 500px">
+    <div id="div2" style="width: 100%;height: 100%">
+        <div id="div1" style="margin-top: 200px;margin-left: 500px">
+            <button id="button1">button1</button>
+            <p id="p1"></p>
+            <br>
+            <p id="p2"></p>
+        </div>
+
+    </div>
+    
+    <script>
+        var button = document.getElementById("button1");
+        var p1 = document.getElementById("p1");
+        button.addEventListener("click",function (event) {
+            if (event.which === 1){
+                p1.innerText = "鼠标左键: " + event.clientX + ", " + event.clientY;
+                event.stopPropagation();
+            }
+        },false);
+
+        var div2 = document.getElementById("div2");
+        div2.addEventListener("click",function (event) {
+            if (event.which === 1){
+                p2.innerText = "鼠标左键: " + event.clientX + ", " + event.clientY;
+                event.stopPropagation();
+            }
+        },false);
+    </script>
+</body>
+</html>
