@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseover和mouseout事件的relatedTarget属性</title>
+</head>
+<body>
+    <div id="div1" style="width: 100px;height: 100px;margin-left: 100px;margin-top: 100px;background-color: red">
+
+    </div>
+
+    <script>
+        var div = document.getElementById("div1");
+        div.addEventListener("mouseover",function (event) {
+            div.style.backgroundColor = "blue";
+            console.log("event.relatedTarget === document.body: ",event.relatedTarget === document.body);
+        },false);
+
+        div.addEventListener("mouseout",function (event) {
+            div.style.backgroundColor = "red";
+            console.log("event.relatedTarget === document.body: ",event.relatedTarget === document.body);
+        },false);
+
+    </script>
+</body>
+</html>
