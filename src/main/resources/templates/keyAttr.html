@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件的按键属性</title>
+</head>
+<body style="height: 100px">
+    <div id="div1"></div>
+
+    <script>
+        var div1 = document.getElementById("div1");
+        var p = null;
+        document.body.addEventListener("click",function (event) {
+            if(event.shiftKey){
+                p = document.createElement("p");
+                p.innerText = "点击鼠标的同时按下了shift键";
+                div1.appendChild(p);
+            }
+
+            if(event.altKey){
+                p = document.createElement("p");
+                p.innerText = "点击鼠标的同时按下了alt键";
+                div1.appendChild(p);
+
+            }
+
+            if(event.ctrlKey){
+                p = document.createElement("p");
+                p.innerText = "点击鼠标的同时按下了ctrl键";
+                div1.appendChild(p);
+            }
+
+            if(event.metaKey){
+                p = document.createElement("p");
+                p.innerText = "点击鼠标的同时按下了meta键";
+                div1.appendChild(p);
+            }
+        },false)
+
+    </script>
+</body>
+</html>
