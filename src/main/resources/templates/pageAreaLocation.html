@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面区域坐标信息</title>
+</head>
+<body style="height: 500px">
+    <script>
+        var p = null;
+        for(var i = 0;i < 100;i++){
+            p = document.createElement("p");
+            p.innerText = "到这日才发现: " + i;
+            document.body.appendChild(p);
+        }
+
+        document.body.addEventListener("click",function (event) {
+            var pageX = event.pageX;
+            var pageY = event.pageY;
+            if(pageX === undefined){
+                pageX = event.clientX + window.scrollLeft;
+            }
+
+            if (pageY === undefined){
+                pageY = event.clientY + window.scrollTop;
+            }
+
+            console.log("pageX: ",pageX," ","clientX: ",event.clientX);
+            console.log("pageY: ",pageY," ","clientY: ",event.clientY);
+        },false);
+    </script>
+</body>
+</html>
