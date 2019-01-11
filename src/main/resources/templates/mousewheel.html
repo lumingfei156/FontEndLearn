@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mousewheel事件</title>
+</head>
+<body style="background-color: red;height: 500px">
+    <p id="p"></p>
+
+    <script>
+        var p = document.getElementById("p");
+        document.body.addEventListener("mousewheel",function (event) {
+            p.innerText = "mousewheel event.wheelDelta: " + event.wheelDelta;
+        },false);
+    </script>
+</body>
+</html>
