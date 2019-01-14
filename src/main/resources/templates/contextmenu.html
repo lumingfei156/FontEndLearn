@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contextmenu事件</title>
+</head>
+<body>
+    <div id="div">通过右键点击我来显示菜单！！！</div>
+    <ul id="menu" style="position: absolute;visibility: hidden;background-color: silver">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        window.addEventListener("load",function (ev) {
+
+            var menu = document.getElementById("menu");
+            menu.addEventListener("contextmenu",function (ev) {
+                ev.preventDefault();
+                menu.style.left = ev.clientX + "px";
+                menu.style.top = ev.clientY + "px";
+                menu.style.visibility = "visible";
+            },false);
+
+
+        },false);
+
+        document.addEventListener("click",function (ev) {
+            document.getElementById("menu").style.visibility = "hidden";
+        },false);
+
+    </script>
+</body>
+</html>
