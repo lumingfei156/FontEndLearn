@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>beforeunload事件</title>
+</head>
+<body>
+    <a href="www.baidu.com">百度</a>
+
+    <script>
+        window.addEventListener("beforeunload",function (ev) {
+            var message = "规则就是用来打破的！";
+            ev.returnValue = message;
+            return message;
+        },false);
+    </script>
+</body>
+</html>
