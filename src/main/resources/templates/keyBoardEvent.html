@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>键盘事件的key和char属性</title>
+    <title>键盘事件的属性</title>
 </head>
 <body>
     <textarea rows="10" cols="150" id="myText">
@@ -11,12 +11,31 @@
 
     <script>
         var myText = document.getElementById("myText");
-        myText.addEventListener("keypress",function (event) {
+        myText.addEventListener("keydown",function (event) {
             console.log("event.key: ",event.key);
             console.log("event.char: ",event.char);
+            if(event.location === 1){
+                console.log("location的值是: ",event.location," ","表示按下了左侧按钮!");
+            }
+
+            if(event.location === 2){
+                console.log("location的值是: ",event.location," ","表示按下了右侧按钮!");
+            }
+
+            if(event.getModifierState("Shift")){
+                console.log("按下了Shift键");
+            }else if(event.getModifierState("Control")){
+                console.log("按下了Ctrl键");
+            }else if(event.getModifierState("Alt")){
+                console.log("按下了Alt键");
+            }else if(event.getModifierState("Meta")){
+                console.log("按下了Meta键");
+            }else{
+                console.log("没有按下上面的按钮");
+            }
+
             this.value = event.key;
-            this.value = event.char;
-        },false)
+        },false);
 
     </script>
 </body>
