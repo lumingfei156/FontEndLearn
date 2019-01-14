@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>textInput事件</title>
+</head>
+<body>
+    <textarea rows="10" cols="150" id="myText">
+
+    </textarea>
+
+    <script>
+        var myText = document.getElementById("myText");
+        myText.addEventListener("textInput",function (event) {
+            console.log("触发了textInput事件");
+            console.log("event.data: ",event.data);
+            console.log("event.inputMethod: ",event.inputMethod);
+        },false);
+
+        myText.addEventListener("keypress",function (event) {
+            console.log("触发了keypress事件");
+        },false);
+
+    </script>
+</body>
+</html>
