@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM节点插入事件</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        window.addEventListener("load",function (ev) {
+            var ul = document.getElementById("myList");
+
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode("item 4"));
+
+            document.addEventListener("DOMNodeInserted",function (event) {
+                console.log("document上触发了DOMNodeInserted事件 >>>>> start");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("event.relatedNode: ",event.relatedNode);
+                console.log("document上触发了DOMNodeInserted事件 >>>>> end");
+                console.log("\n");
+            },false);
+
+            document.addEventListener("DOMSubtreeModified",function (event) {
+                console.log("document上触发了DOMSubtreeModified事件 >>>>> start");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("event.relatedNode: ",event.relatedNode);
+                console.log("document上触发了DOMSubtreeModified事件 >>>>> end");
+                console.log("\n");
+            },false);
+
+            li.addEventListener("DOMNodeInserted",function (event) {
+                console.log("li上触发了DOMNodeInserted事件 >>>>> start");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("event.relatedNode: ",event.relatedNode);
+                console.log("li上触发了DOMNodeInserted事件 >>>>> end");
+                console.log("\n");
+            },false);
+
+            li.addEventListener("DOMNodeInsertedIntoDocument",function (event) {
+                console.log("li上触发了DOMNodeInsertedIntoDocument事件 >>>>> start");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("event.relatedNode: ",event.relatedNode);
+                console.log("li上触发了DOMNodeInsertedIntoDocument事件 >>>>> end");
+                console.log("\n");
+            },false);
+
+
+            ul.appendChild(li);
+        },false);
+
+
+    </script>
+</body>
+</html>
