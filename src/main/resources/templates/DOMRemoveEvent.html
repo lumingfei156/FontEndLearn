@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM节点删除事件</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+
+
+        window.addEventListener("load",function (ev) {
+            var ul = document.getElementById("myList");
+
+            document.addEventListener("DOMSubtreeModified",function (event) {
+                console.log("DOMSubtreeModified >>>>> start");
+                console.log("在body属性上触发了DOMSubtreeModified事件!");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("DOMSubtreeModified >>>>> end");
+                console.log("\n");
+            },false);
+
+            document.addEventListener("DOMNodeRemoved",function (event) {
+                console.log("DOMNodeRemoved >>>>> start");
+                console.log("在document上触发了DOMNodeRemoved事件!");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("DOMNodeRemoved >>>>> end");
+                console.log("\n");
+            });
+
+            ul.addEventListener("DOMNodeRemoved",function (event) {
+                console.log("DOMNodeRemoved >>>>> start");
+                console.log("在ul上触发了DOMNodeRemoved事件!");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("event.relatedNode: ",event.relatedNode);
+                console.log("DOMNodeRemoved >>>>> end");
+                console.log("\n");
+            },false);
+
+            ul.firstChild.addEventListener("DOMNodeRemovedFromDocument",function (event) {
+                console.log("DOMNodeRemovedFromDocument >>>>> start");
+                console.log("在li上触发了DOMNodeRemoved事件!");
+                console.log("event.type: ",event.type);
+                console.log("event.target: ",event.target);
+                console.log("event.relatedNode: ",event.relatedNode);
+                console.log("DOMNodeRemovedFromDocument >>>>> end");
+                console.log("\n");
+            },false);
+
+            ul.parentNode.removeChild(ul);
+
+        },false);
+
+
+
+
+    </script>
+</body>
+</html>
