@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件的key和char属性</title>
+</head>
+<body>
+    <textarea rows="10" cols="150" id="myText">
+
+    </textarea>
+
+    <script>
+        var myText = document.getElementById("myText");
+        myText.addEventListener("keypress",function (event) {
+            console.log("event.key: ",event.key);
+            console.log("event.char: ",event.char);
+            this.value = event.key;
+            this.value = event.char;
+        },false)
+
+    </script>
+</body>
+</html>
