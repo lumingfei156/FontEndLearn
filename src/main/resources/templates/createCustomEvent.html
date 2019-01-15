@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建自定义事件</title>
+</head>
+<body>
+    <div id="myDiv">
+
+    </div>
+
+    <script>
+        var div = document.getElementById("myDiv");
+
+        var event = document.createEvent("CustomEvent");
+        event.initCustomEvent("myEvent",true,true,"UZI牛逼");
+
+        div.addEventListener("myEvent",function (event) {
+            alert(event.detail);
+        },false);
+
+        window.setTimeout(function () {
+            div.dispatchEvent(event);
+        },2000);
+
+    </script>
+</body>
+</html>
