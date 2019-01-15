@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建键盘事件</title>
+</head>
+<body>
+    <textarea cols="150" rows="150" id="text">
+
+    </textarea>
+
+    <script>
+        window.setTimeout(function () {
+            var text = document.getElementById("text");
+            var keyEvent = document.createEvent("KeyboardEvent");
+            keyEvent.initKeyboardEvent("keypress",true,true,document.defaultView,"a",0,"Shift",false,"");
+            text.dispatchEvent(keyEvent);
+        },2000);
+
+
+    </script>
+</body>
+</html>
