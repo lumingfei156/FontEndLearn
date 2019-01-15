@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟鼠标事件</title>
+</head>
+<body>
+    <button id="button">笑忘书中</button>
+
+    <script>
+        var button = document.getElementById("button");
+        button.addEventListener("click",function () {
+            alert("现在按下了button按钮");
+        },false);
+
+        //两秒钟后，点击button
+        window.setTimeout(function () {
+            var mouseEvent = document.createEvent("MouseEvents");
+            mouseEvent.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+            button.dispatchEvent(mouseEvent);
+        },2000);
+
+    </script>
+</body>
+</html>
