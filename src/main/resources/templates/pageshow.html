@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pageshow事件</title>
+</head>
+<body>
+    <a href="red.html">hello</a>
+
+    <script>
+        (function () {
+
+            var showCount = 0;
+            window.addEventListener("load",function (ev) {
+                console.log("页面被加载了");
+            },false);
+
+            window.addEventListener("pageshow",function (ev) {
+                showCount++;
+                console.log("页面被浏览了" + showCount + "次");
+                if (ev.persisted){
+                    console.log("页面保存在bfcache");
+                }else {
+                    console.log("页面没有保存在bfcache");
+                }
+
+            },false);
+
+        })();
+
+    </script>
+</body>
+</html>
