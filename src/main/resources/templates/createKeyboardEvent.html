@@ -10,10 +10,14 @@
     </textarea>
 
     <script>
+        var text = document.getElementById("text");
+        text.addEventListener("keydown",function (event) {
+            console.log("触发了keydown方法");
+        },false);
         window.setTimeout(function () {
-            var text = document.getElementById("text");
+
             var keyEvent = document.createEvent("KeyboardEvent");
-            keyEvent.initKeyboardEvent("keypress",true,true,document.defaultView,"a",0,"Shift",false,"");
+            keyEvent.initKeyboardEvent("keydown",true,true,document.defaultView,"a",0,"Shift",false,"");
             text.dispatchEvent(keyEvent);
         },2000);
 
