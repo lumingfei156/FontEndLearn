@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义错误类型</title>
+</head>
+<body>
+    <script>
+        //自定义错误类型
+        function CustomError(message) {
+            this.name = "CustomError";
+            this.message = message;
+        }
+        CustomError.prototype = new Error();
+
+
+        try{
+            throw new CustomError("主动抛出了错误类型");
+        }catch (customError){
+            console.log(customError.message);
+        }
+
+    </script>
+</body>
+</html>
