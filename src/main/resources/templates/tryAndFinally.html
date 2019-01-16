@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try-catch-finally子句</title>
+</head>
+<body>
+    <script>
+        function returnTest(num) {
+
+            try{
+                return num * num;
+            }catch(error){
+                console.log(error.message);
+            }finally {
+                return (num === 2) ? 0 : 1;
+            }
+        }
+
+        var num = returnTest(2);
+        alert("returnTest(2)的结果是： "+ num);
+    </script>
+</body>
+</html>
