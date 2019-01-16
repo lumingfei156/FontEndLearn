@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON对象的stringify()和parse()</title>
+</head>
+<body>
+    <script>
+        var jsonObject = {
+            name : "lulu",
+            sex : "man"
+        };
+        var jsonText = JSON.stringify(jsonObject);
+        console.info(jsonText);
+
+        var parseObject = JSON.parse(jsonText);
+
+        console.info("parseObject.name: ",parseObject.name);
+
+    </script>
+</body>
+</html>
