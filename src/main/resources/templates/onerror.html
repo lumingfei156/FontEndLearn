@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>错误事件处理程序</title>
+</head>
+<body>
+<script>
+    // window.onerror = function (message) { alert("错误信息为: "+ message); };
+    // window.setTimeout(function () {
+    //     throw new TypeError("主动抛出异常");
+    // },2000);
+
+    var image = new Image();
+
+
+    image.addEventListener("error",function (event) {
+        alert("图像没有加载！！");
+    },false);
+
+    image.src = "kkk.gif";
+</script>
+</body>
+</html>
