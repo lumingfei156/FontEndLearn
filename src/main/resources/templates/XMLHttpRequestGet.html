@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax中的GET请求</title>
+</head>
+<body>
+    <div id= "div">
+
+    </div>
+
+    <script>
+        var div = document.getElementById("div");
+        var xhr = new XMLHttpRequest();
+
+        //设置事件监听器
+        xhr.onreadystatechange = function (ev) {
+            if(xhr.readyState === 4){
+                if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
+                    div.innerHTML = "后端返回的结果是： " + xhr.responseText;
+                }else {
+                    div.innerHTML = "抱歉！请求失败，状态码为: " + xhr.status;
+                }
+            }
+        };
+        var url = "/fontEndLearn/xmlHttpRequestAttr/xmlHttpRequestGet?";
+        url += encodeURIComponent("name") + "=" + encodeURIComponent("路路");
+        xhr.open("get",url,true);
+        xhr.send(null);
+
+    </script>
+</body>
+</html>

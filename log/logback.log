@@ -1489,3 +1489,133 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+17:03:07.071 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 13796 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:03:07.076 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:03:07.709 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:03:07.862 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:03:07.872 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:03:08.782 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:03:08.801 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:03:08.811 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:03:08.812 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:03:08.819 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:03:08.972 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:03:08.973 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1771 ms
+17:03:10.034 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:03:10.055 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:03:10.083 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:03:10.090 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 3.807 seconds (JVM running for 8.554)
+17:05:26.385 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 9012 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:05:26.390 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:05:27.030 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:05:27.176 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:05:27.185 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:05:28.380 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:05:28.405 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:05:28.417 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:05:28.418 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:05:28.429 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:05:28.578 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:05:28.578 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2073 ms
+17:05:29.588 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:05:29.611 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:05:29.638 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:05:29.645 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 4.095 seconds (JVM running for 9.509)
+17:06:03.566 logback [http-nio-8080-exec-4] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:06:03.566 logback [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:06:03.584 logback [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+17:06:56.158 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 2056 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:06:56.163 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:06:56.824 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:06:56.990 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:06:56.998 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:06:57.956 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:06:57.972 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:06:57.983 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:06:57.984 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:06:57.991 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:06:58.145 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:06:58.145 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1849 ms
+17:06:59.149 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:06:59.167 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:06:59.191 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:06:59.196 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 3.889 seconds (JVM running for 8.907)
+17:07:03.698 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:07:03.698 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:07:03.709 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+17:07:24.486 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 9700 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:07:24.492 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:07:25.125 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:07:25.274 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:07:25.283 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:07:26.383 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:07:26.405 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:07:26.418 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:07:26.419 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:07:26.426 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:07:26.570 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:07:26.570 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1934 ms
+17:07:27.514 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:07:27.530 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:07:27.557 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:07:27.563 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 3.796 seconds (JVM running for 8.499)
+17:09:10.839 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:09:10.840 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:09:10.846 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+17:10:10.844 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 6792 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:10:10.851 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:10:11.560 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:10:11.741 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:10:11.751 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:10:12.712 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:10:12.729 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:10:12.738 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:10:12.738 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:10:12.745 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:10:12.903 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:10:12.904 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1926 ms
+17:10:13.855 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:10:13.874 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:10:13.901 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:10:13.905 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 3.848 seconds (JVM running for 8.698)
+17:10:18.966 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:10:18.966 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:10:18.972 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+17:14:12.528 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 3004 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:14:12.534 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:14:13.221 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:14:13.445 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:14:13.461 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:14:14.540 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:14:14.558 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:14:14.568 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:14:14.568 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:14:14.575 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:14:14.720 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:14:14.721 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2050 ms
+17:14:15.893 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:14:15.911 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:14:15.937 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:14:15.941 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 4.164 seconds (JVM running for 9.375)
+17:14:21.568 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:14:21.568 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:14:21.576 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+17:14:48.578 logback [main] INFO  c.fontend.fontend.FontendApplication - Starting FontendApplication on DESKTOP-HHR2Q8R with PID 4116 (E:\Program\IDEA\FontEndLearn\target\classes started by lulu in E:\Program\IDEA\FontEndLearn)
+17:14:48.584 logback [main] INFO  c.fontend.fontend.FontendApplication - No active profile set, falling back to default profiles: default
+17:14:49.278 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontendlearn.dao.mapper]' package. Please check your configuration.
+17:14:49.424 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:14:49.433 logback [main] WARN  o.s.c.a.ClassPathScanningCandidateComponentProvider - No MyBatis mapper was found in '[com.fontend.fontend]' package. Please check your configuration.
+17:14:50.380 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:14:50.397 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:14:50.406 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:14:50.406 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.13
+17:14:50.415 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;F:\software\programme\apache-maven-3.5.4\bin;F:\software\programme\svn\bin;F:\software\programme\mysql\mysql-5.7.22-winx64\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\lulu\AppData\Local\Microsoft\WindowsApps;C:\Users\lulu\AppData\Local\GitHubDesktop\bin;F:\software\programme\bandizip\;.]
+17:14:50.557 logback [main] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring embedded WebApplicationContext
+17:14:50.558 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1825 ms
+17:14:51.496 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:14:51.515 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:14:51.547 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/fontEndLearn'
+17:14:51.552 logback [main] INFO  c.fontend.fontend.FontendApplication - Started FontendApplication in 3.771 seconds (JVM running for 8.62)
+17:15:12.368 logback [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/fontEndLearn] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:15:12.369 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:15:12.380 logback [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
