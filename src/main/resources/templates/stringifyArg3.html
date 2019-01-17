@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stringify()方法的第三个参数</title>
+</head>
+<body>
+
+    <script>
+        var jsonObject = {
+            name : "lulu",
+            sex : "man",
+            age : 2
+        };
+
+        var jsonText1 = JSON.stringify(jsonObject,["name","sex"],4);
+        console.info("jsonText1: ",jsonText1);
+
+        var jsonText2 = JSON.stringify(jsonObject,["name","sex"],2);
+        console.info("jsonText2: ",jsonText2);
+
+        var jsonText3 = JSON.stringify(jsonObject,["name","sex"],"|||");
+        console.info("jsonText3: ",jsonText3);
+
+    </script>
+
+</body>
+</html>
