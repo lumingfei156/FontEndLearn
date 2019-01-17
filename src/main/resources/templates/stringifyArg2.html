@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stringify方法第二个参数</title>
+</head>
+<body>
+    <script>
+        var jsonObject = {
+            name : "lulu",
+                sex : "man",
+            age : 2
+        };
+
+        var jsonObject2 = {
+            name : "lulu",
+            sex : "man",
+            age : 2,
+            toJSON : function () {
+                return this.name;
+            }
+        };
+
+        var jsonText1 = JSON.stringify(jsonObject,function (key,value) {
+            switch (key){
+                case "name":
+                    return value;
+                case "sex":
+                    return value;
+                case "age":
+                    return undefined;
+                default:
+                    return value;
+            }
+        });
+
+        var jsonText2 = JSON.stringify(jsonObject,["name","sex"]);
+        var jsonText3 = JSON.stringify(jsonObject2);
+        console.log("jsonText1: ",jsonText1);
+        console.log("jsonText2: ",jsonText2);
+
+        console.log("jsonText3: ",jsonText3);
+
+    </script>
+</body>
+</html>
