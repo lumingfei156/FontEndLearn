@@ -21,6 +21,7 @@ public class MyConfigurationSupport extends WebMvcConfigurationSupport {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+//        registry.addResourceHandler("/templates/**").addResourceLocations("classpath:/templates/");
         super.addResourceHandlers(registry);
     }
 
@@ -28,11 +29,11 @@ public class MyConfigurationSupport extends WebMvcConfigurationSupport {
      * 将某一访问路径和某个页面绑定，即不通过controller直接访问某个页面
      * @param registry ss
      */
-//    @Override
-//    public void addViewControllers(ViewControllerRegistry registry) {
-//        registry.addViewController("/login").setViewName("login");
-//        super.addViewControllers(registry);
-//    }
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/xmlHttRequestAttr").setViewName("XMLHttpRequestAttr");
+        super.addViewControllers(registry);
+    }
 
     /**
      *实现拦截器效果

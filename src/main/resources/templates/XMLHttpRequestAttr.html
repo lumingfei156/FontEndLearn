@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest的基本应用</title>
+</head>
+<body>
+    <div id="div">
+
+    </div>
+
+    <script>
+        var jsonObject = {
+                name : "lulu",
+                sex : "man"
+        };
+        var div = document.getElementById("div");
+
+        var xhr = new XMLHttpRequest();
+        //设置事件监听器
+        xhr.onreadystatechange = function (ev) {
+            if(xhr.readyState === 4){
+                if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
+                    div.innerHTML = "后端返回的结果是： " + xhr.responseText;
+                }else {
+                    div.innerHTML = "抱歉！请求失败，状态码为: " + xhr.status;
+                }
+            }
+        };
+        xhr.open("POST","/fontEndLearn/xmlHttpRequestAttr/xmlHttpRequestAttr",true);
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        // xhr.setRequestHeader("param",JSON.stringify(jsonObject));
+        window.setTimeout(function () {
+            xhr.send("param="+JSON.stringify(jsonObject));
+        },2000);
+
+    </script>
+</body>
+</html>
