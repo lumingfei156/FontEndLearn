@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax中的进度事件load</title>
+</head>
+<body>
+    <div id="div">
+
+    </div>
+
+    <script>
+        var div = document.getElementById("div");
+
+        var jsonObject = {
+            name : "剑姬"
+        };
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.onload = function (ev) {
+            if (ev.target.status >= 200 && ev.target.status < 300 || ev.target.status === 304){
+                div.innerHTML = "服务器返回的信息; " + ev.target.responseText;
+            }else{
+                div.innerHTML = "请求服务器错误，错误代码为: " + ev.target.status + "\n" + "错误文档为: " + ev.target.responseText;
+            }
+        };
+
+        xhr.open("post","/fontEndLearn/xmlHttpRequestAttr/loadEvent",true);
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        window.setTimeout(function () {
+            xhr.send("param="+ JSON.stringify(jsonObject));
+        },1000);
+
+    </script>
+</body>
+</html>

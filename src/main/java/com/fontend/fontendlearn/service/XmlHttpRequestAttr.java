@@ -30,4 +30,11 @@ public class XmlHttpRequestAttr {
         String name = request.getParameter("name");
         return name + "??";
     }
+
+    @RequestMapping(value = "loadEvent",method = RequestMethod.POST, produces = { "application/json;charset=UTF-8" })
+    public String loadEvent(@RequestParam String param){
+        JSONObject jsonObject = JSON.parseObject(param);
+        String name = jsonObject.getString("name");
+        return name + " pretz";
+    }
 }

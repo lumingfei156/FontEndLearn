@@ -33,6 +33,7 @@ public class MyConfigurationSupport extends WebMvcConfigurationSupport {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/xmlHttRequestAttr").setViewName("XMLHttpRequestAttr");
         registry.addViewController("/XMLHttpRequestGet").setViewName("XMLHttpRequestGet");
+        registry.addViewController("/xhrLoadEvent").setViewName("xhrLoadEvent");
         super.addViewControllers(registry);
     }
 
