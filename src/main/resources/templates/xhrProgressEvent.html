@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xhr中的progress事件</title>
+</head>
+<body>
+<div id="div">
+
+</div>
+
+<div id="div2">
+
+</div>
+
+<script>
+    var div = document.getElementById("div");
+    var div2 = document.getElementById("div2");
+
+    var jsonObject = {
+        name : "剑姬"
+    };
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.onload = function (ev) {
+        if (ev.target.status >= 200 && ev.target.status < 300 || ev.target.status === 304){
+            div.innerHTML = "服务器返回的信息; " + ev.target.responseText;
+        }else{
+            div.innerHTML = "请求服务器错误，错误代码为: " + ev.target.status + "\n" + "错误文档为: " + ev.target.responseText;
+        }
+    };
+
+    xhr.onprogress = function (ev) {
+        if(ev.lengthComputable){
+            div2.innerHTML = "目前接收了 " + ev.position+ " 字节的数据" + "\n" + "一共有 " + ev.totalSize + " 字节的数据";
+        }
+    };
+
+    xhr.open("post","/fontEndLearn/xmlHttpRequestAttr/loadEvent",true);
+    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    window.setTimeout(function () {
+        xhr.send("param="+ JSON.stringify(jsonObject));
+    },1000);
+
+</script>
+</body>
+</html>
