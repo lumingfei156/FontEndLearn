@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>http流实现服务器主动推送效果</title>
+</head>
+<body>
+    <button id="start" onclick="start(event)">
+        开始
+    </button>
+
+    <button id="button" onclick="end(event)">
+        结束
+    </button>
+
+    <div id="div">
+
+    </div>
+
+    <script>
+        var jsonObject = {
+            name : "lulu"
+        };
+        var endObject = {
+            end : "end"
+        };
+
+        var div = document.getElementById("div");
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function (ev) {
+            if(xhr.readyState === 3){
+                div.innerHTML = xhr.responseText;
+            }else if(xhr.readyState === 4){
+                div.innerHTML = xhr.responseText;
+            }
+        };
+
+
+
+        function start(event) {
+            xhr.open("POST","/fontEndLearn/httpFlowService/responseAndRequest",true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("param="+ JSON.stringify(jsonObject));
+        }
+
+        function end(event) {
+            xhr.open("POST","/fontEndLearn/httpFlowService/responseAndRequest",true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("endObject=" + JSON.stringify(endObject));
+        }
+    </script>
+</body>
+</html>

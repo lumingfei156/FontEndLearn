@@ -35,6 +35,7 @@ public class MyConfigurationSupport extends WebMvcConfigurationSupport {
         registry.addViewController("/XMLHttpRequestGet").setViewName("XMLHttpRequestGet");
         registry.addViewController("/xhrLoadEvent").setViewName("xhrLoadEvent");
         registry.addViewController("/xhrProgressEvent").setViewName("xhrProgressEvent");
+        registry.addViewController("/httpFlow").setViewName("httpFlow");
         super.addViewControllers(registry);
     }
 
